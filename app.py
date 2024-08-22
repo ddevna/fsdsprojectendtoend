@@ -1,4 +1,4 @@
-from src.DimondPricePrediction.pipelines.prediction_pipeline import CustomData,PredictPipeline
+from src.DiamondPricePrediction.pipelines.prediction_pipeline import CustomData,PredictPipeline
 
 from flask import Flask,request,render_template,jsonify
 
@@ -40,6 +40,6 @@ def predict_datapoint():
         
         return render_template("result.html",final_result=result)
 
-#execution begin now
+#execution begin
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=8080)
