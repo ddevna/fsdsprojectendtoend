@@ -6,7 +6,7 @@ import mlflow
 import mlflow.sklearn
 import numpy as np
 import pickle
-from src.DimondPricePrediction.utils.utils import load_object
+from src.DiamondPricePrediction.utils.utils import load_object
 
 
 
