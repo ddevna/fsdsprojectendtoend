@@ -7,7 +7,7 @@ import mlflow.sklearn
 import numpy as np
 import pickle
 from src.DiamondPricePrediction.utils.utils import load_object
-
+import dagshub
 
 
 class ModelEvaluation:
@@ -30,8 +30,9 @@ class ModelEvaluation:
             model=load_object(model_path)
 
         
+            dagshub.init(repo_owner='ddevna', repo_name='fsdsprojectendtoend', mlflow=True)
 
-            mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
+            mlflow.set_registry_uri("https://dagshub.com/ddevna/fsdsprojectendtoend.mlflow")
             
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             
